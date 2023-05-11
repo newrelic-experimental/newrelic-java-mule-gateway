@@ -1,1 +1,5 @@
 rootProject.name = 'java-instrumentation-template'
+include 'MuleGateway-Core.2.2'
+include 'MuleGateway-Client.2.2'
+include 'APIClient'
+include 'MuleHttp'
