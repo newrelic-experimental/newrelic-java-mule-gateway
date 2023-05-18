@@ -21,6 +21,7 @@ import com.newrelic.api.agent.weaver.Weave;
 import com.newrelic.api.agent.weaver.Weaver;
 
 @Weave(originalName="com.mulesoft.module.client.APIPlatformRestClient")
+@SuppressWarnings("deprecation")
 public abstract class APIPlatformRestClient_instrumentation {
 
 	@Trace(dispatcher=true)

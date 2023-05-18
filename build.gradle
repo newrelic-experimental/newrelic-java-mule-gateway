@@ -157,6 +157,15 @@ subprojects {
   repositories {
     mavenLocal()
     mavenCentral()
+    maven {
+      url 'https://repository.mulesoft.org/releases/'
+    }
+    maven {
+      url 'https://repository.mulesoft.org/nexus/content/repositories/public/'
+    }
+    maven {
+      url 'https://repo1.maven.org/maven2'
+    }
   }
 
   apply plugin: 'java'
@@ -169,6 +178,7 @@ subprojects {
 
   dependencies {
     testImplementation  fileTree(dir: '../lib', include: "*.jar") // + project.javaAgentVersion
+    testImplementation  fileTree(dir: 'lib', include: "*.jar") // + project.javaAgentVersion
     testImplementation 'org.nanohttpd:nanohttpd:2.3.1'
     testImplementation 'com.newrelic.agent.java:newrelic-agent:' + project.javaAgentVersion
   }
